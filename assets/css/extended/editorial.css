@@ -1,0 +1,49 @@
+:root {
+    --main-width: 760px;
+    --nav-width: 1040px;
+    --radius: 2px;
+    --primary: rgb(22, 24, 27);
+    --secondary: rgb(91, 97, 105);
+    --content: rgb(31, 34, 38);
+    --border: rgb(224, 226, 229);
+}
+
+body {
+    font-feature-settings: "kern";
+}
+
+.logo a {
+    letter-spacing: 0;
+    font-weight: 760;
+}
+
+.post-entry {
+    border: 1px solid var(--border);
+}
+
+.entry-header h2,
+.post-title {
+    letter-spacing: 0;
+}
+
+.entry-content,
+.post-content {
+    line-height: 1.72;
+}
+
+.post-meta,
+.entry-footer {
+    color: var(--secondary);
+}
+
+.home-info {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--gap);
+    padding-bottom: var(--gap);
+}
+
+.home-info .entry-content {
+    color: var(--secondary);
+    font-size: 1rem;
+    max-width: 680px;
+}
