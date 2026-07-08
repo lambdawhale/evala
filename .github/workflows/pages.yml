@@ -39,6 +39,7 @@ jobs:
 
       - name: Configure Pages
         id: pages
+        # Repository Settings > Pages must use "GitHub Actions" as the source.
         uses: actions/configure-pages@v5
 
       - name: Build with Hugo
@@ -46,6 +47,11 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Configure custom domain
+        run: |
+          touch public/.nojekyll
+          echo "evala.xyz" > public/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
